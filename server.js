@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 var app = express();
-const PORT = process.env.port || 3000;
+var PORT = process.env.port || 3000;
 
 // ------------ Sets up the Express app --------------- //
 // ------------ to handle data parsing --------------- //
@@ -28,7 +28,7 @@ require('./app/routing/htmlRoutes.js')(app);
 // ============ START LISTENER ON PORT ============= //
 
 console.log('app STARTED listening on port ' + PORT);
-app.listen(PORT, '0.0.0.0', function() {
+app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
 
